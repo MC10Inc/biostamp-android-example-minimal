@@ -1,2 +1,2 @@
-rootProject.name='BioStamp3 Minimal Example'
+rootProject.name='biostamp-android-example-minimal'
 include ':app'
