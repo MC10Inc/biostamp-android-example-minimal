@@ -7,13 +7,35 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/scanButton"
+        android:id="@+id/connect_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Connect and Blink LED"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/sensors_in_range_text"
+        app:layout_constraintTop_toBottomOf="@+id/sensors_in_range_text" />
+
+    <Button
+        android:id="@+id/scan_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Scan for BioStamps"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/sensors_in_range_text"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/sensors_in_range_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/connect_button"
+        app:layout_constraintLeft_toLeftOf="@id/scan_button"
+        app:layout_constraintTop_toBottomOf="@+id/scan_button"
+        tools:text="Sensors in range: 0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
