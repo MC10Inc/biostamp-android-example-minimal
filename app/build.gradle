@@ -45,6 +45,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -57,5 +61,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     // Add the BioStamp SDK to the project. This adds the library, source code, and Javadoc.
-    implementation 'com.mc10inc.biostamp3:sdk:0.0.2-5d2c112'
+    implementation 'com.mc10inc.biostamp3:sdk:0.0.3-5cede1d'
 }
