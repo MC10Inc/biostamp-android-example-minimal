@@ -3,11 +3,7 @@ apply plugin: 'com.android.application'
 // Add the GitHub Packages repositories containing the BioStamp SDK
 repositories {
     maven() {
-        url = uri("https://maven.pkg.github.com/mc10inc/bitgatt")
-        credentials {
-            username = project.findProperty("gpr.user")
-            password = project.findProperty("gpr.key")
-        }
+        url 'https://jitpack.io'
     }
     maven() {
         url = uri("https://maven.pkg.github.com/mc10inc/biostamp-android")
@@ -46,8 +42,8 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    viewBinding {
-        enabled = true
+    buildFeatures {
+        viewBinding = true
     }
 }
 
@@ -61,5 +57,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     // Add the BioStamp SDK to the project. This adds the library, source code, and Javadoc.
-    implementation 'com.mc10inc.biostamp3:sdk:0.0.3-5cede1d'
+    implementation 'com.mc10inc.biostamp3:sdk:0.0.4-f22d223'
 }
